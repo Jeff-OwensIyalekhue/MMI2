@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/AR_Test.unity
-    guid: 2b3dce5088300374095f610f038d34ce
   - enabled: 1
-    path: Assets/Scenes/Orbitcamera.unity
-    guid: b52f65a335dcc1b4cb0399408f93deec
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2ccc1dae4b688644e92530d01b7279ab
+  - enabled: 1
+    path: Assets/Scenes/GameClassic.unity
+    guid: 15b6d356925f7f340914e5b08284b490
+  - enabled: 1
+    path: Assets/Scenes/GameAR.unity
+    guid: 4920204b2a93573458e719247df01be0
   m_configObjects: {}
