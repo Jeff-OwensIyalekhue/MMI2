@@ -415,12 +415,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1507815505258592823, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
-      propertyPath: m_SizeDelta.x
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1507815505258592823, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1507815505258592823, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
@@ -445,12 +445,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1507815505949858959, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
-      propertyPath: m_SizeDelta.x
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1507815505949858959, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1507815505949858959, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
@@ -475,12 +475,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3397136038048787051, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
-      propertyPath: m_SizeDelta.x
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3397136038048787051, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3397136038048787051, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
@@ -492,11 +492,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: QuestAnswUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4988407173431743713, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4988407173431743718, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
@@ -603,6 +598,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6346573215888383740, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2037682564}
     - target: {fileID: 6346573215888383742, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -620,12 +620,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6346573215888383742, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
-      propertyPath: m_SizeDelta.x
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346573215888383742, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6346573215888383742, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
@@ -650,12 +650,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8199713274104975579, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
-      propertyPath: m_SizeDelta.x
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8199713274104975579, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8199713274104975579, guid: 57ee1a04ef5bf7c4a8007128452a16cc,
@@ -862,13 +862,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameoverScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 8889783281931069894, guid: 4e1823eeedd6534498f9325bd6866d1c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e1823eeedd6534498f9325bd6866d1c, type: 3}
+--- !u!1 &2037682564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8889783281931069894, guid: 4e1823eeedd6534498f9325bd6866d1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1681888250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2140269522
 GameObject:
   m_ObjectHideFlags: 0

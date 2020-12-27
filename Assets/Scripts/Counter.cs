@@ -4,18 +4,17 @@ using TMPro;
 
 public class Counter : MonoBehaviour
 {
+    public int roundLength = 60;
 
     public int initialValue;
     public int minValue = 0;
     public int maxValue = 10;
     public int step = 1;
 
-    public bool enableConfirm = false;
-
     int value;
 
     [SerializeField]
-    TextMeshProUGUI text;
+    TextMeshProUGUI counterText;
     [SerializeField]
     Animator textAnim;
     [SerializeField]
@@ -23,39 +22,51 @@ public class Counter : MonoBehaviour
     [SerializeField]
     Button decrement;
     [SerializeField]
-    GameObject confirm;
+    Button confirm;
+    [SerializeField]
+    TextMeshProUGUI timerText;
+
+    float initTime;
+    bool isFinished = false;
 
     void Awake()
     {
-        if (text == null)
+        if (counterText == null)
         {
-            text = gameObject.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+            counterText = gameObject.transform.Find("Text").GetComponent<TextMeshProUGUI>();
         }
         if (textAnim == null)
         {
-            textAnim = text.GetComponent<Animator>();
+            textAnim = counterText.GetComponent<Animator>();
         }
         if (increment == null)
         {
-            increment = gameObject.transform.Find("IncrementButton").GetComponent<Button>(); 
+            increment = gameObject.transform.Find("IncrementButton").GetComponent<Button>();
         }
         if (decrement == null)
         {
-            decrement = gameObject.transform.Find("DecrementButton").GetComponent<Button>(); 
+            decrement = gameObject.transform.Find("DecrementButton").GetComponent<Button>();
         }
         if (confirm == null)
         {
-            confirm = gameObject.transform.Find("ConfirmButton").gameObject; 
+            confirm = gameObject.transform.Find("ConfirmButton").GetComponent<Button>();
+        }
+        if (counterText == null)
+        {
+            confirm.GetComponentInChildren<TextMeshProUGUI>();
         }
 
         value = initialValue;
     }
 
+    private void Start()
+    {
+        initTime = Time.time;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        confirm.SetActive(enableConfirm);
-
         if (value <= minValue)
         {
             value = minValue;
@@ -73,8 +84,24 @@ public class Counter : MonoBehaviour
             increment.interactable = true;
             decrement.interactable = true;
         }
-        text.SetText(value.ToString());
 
+        if (!isFinished)
+            Round();
+    }
+
+    public void Round()
+    {
+        float t = roundLength - (Time.time - initTime);
+        if (t > 0)
+        {
+            counterText.SetText(value.ToString());
+            timerText.SetText(t.ToString("N0"));
+        }
+        else if (t <= 0)
+        {
+            timerText.SetText("confirm");
+            isFinished = true;
+        }
     }
 
     public void Increment()
@@ -91,7 +118,7 @@ public class Counter : MonoBehaviour
 
     public void SetConfirm(bool toSet)
     {
-        enableConfirm = toSet;
+        confirm.gameObject.SetActive(toSet);
     }
 
     public int getValue()
