@@ -335,8 +335,7 @@ MonoBehaviour:
   maxX: 0.25
   minZ: -0.25
   maxZ: 0.25
-  myPrefab: {fileID: 2550649149660683624, guid: 82c936d199552584c91f9dd82dceaa7a,
-    type: 3}
+  myPrefabs: []
 --- !u!1 &2897648186151260514
 GameObject:
   m_ObjectHideFlags: 0
