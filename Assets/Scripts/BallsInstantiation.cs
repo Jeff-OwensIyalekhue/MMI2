@@ -5,7 +5,7 @@ using UnityEngine;
 public class BallsInstantiation : MonoBehaviour
 {
     [Range(1, 10)]
-    public int amountBalls = 10;
+    public int amountBalls;
     public float minY;
     public float maxY;
     public float minX;
@@ -14,19 +14,32 @@ public class BallsInstantiation : MonoBehaviour
     public float maxZ;
 
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
-    public GameObject myPrefab;
+    public GameObject[] myPrefabs;
+    
+    //public string[] prefabNames = {"Big String Ball.prefab", "Grey Fur Ball.prefab", "Leopard Fur Ball.prefab", "Wooden Ball.prefab", "Yellow Fabric Ball.prefab"};
+    //public GameObject[] prefabs;
 
     // This script will simply instantiate the Prefab when the game starts.
     void Start()
     {
+        // load prefabs
+        //this.prefabs = loadPrefabs();
+
+        this.amountBalls = Random.Range(5,20);
         // Instantiate at position (0, 0, 0) and zero rotation.
-        for (int i = 0; i < amountBalls; i++)
+        for (int i = 0; i < this.amountBalls; i++)
         {
+            // pick random prefab
+            int index = Random.Range(0, this.myPrefabs.Length - 1);
+            print(index);
+            GameObject prefab = this.myPrefabs[index];
+
+            // render at random position
             float x = Random.Range(minX, maxX);
             float z = Random.Range(minZ, maxZ);
             float height = Random.Range(minY, maxY);
-            GameObject ball = Instantiate(myPrefab, transform.position + new Vector3(x, height, z), Quaternion.identity);
-            Rigidbody rb = ball.GetComponent<Rigidbody>();            
+            GameObject ball = Instantiate(prefab, transform.position + new Vector3(x, height, z), Quaternion.identity);
+            Rigidbody rb = ball.GetComponent<Rigidbody>();
             rb.AddForce(Random.onUnitSphere * 10, ForceMode.Impulse);
         }
 

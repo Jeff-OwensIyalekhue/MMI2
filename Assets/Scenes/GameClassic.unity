@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2140269523}
-  m_IndirectSpecularColor: {r: 0.5649007, g: 0.6356403, b: 0.72393775, a: 1}
+  m_IndirectSpecularColor: {r: 0.5649006, g: 0.63564, b: 0.7239374, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -246,6 +246,62 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 26790638}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &428024695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 428024697}
+  - component: {fileID: 428024696}
+  m_Layer: 0
+  m_Name: BallsInit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &428024696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428024695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bf554d8dd88fb49bfb5c404c3df9c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountBalls: 10
+  minY: 0
+  maxY: 0
+  minX: 0
+  maxX: 0
+  minZ: 0
+  maxZ: 0
+  myPrefabs:
+  - {fileID: 5244844364463850899, guid: bba30435cfc1021438633afc9c7d9d92, type: 3}
+  - {fileID: 1254430709463328710, guid: ce560346463913e4bbd3573b1bc221eb, type: 3}
+  - {fileID: 9211378842911323098, guid: 58316d37b4158a043890af0b8429b725, type: 3}
+  - {fileID: 2550649149660683624, guid: 82c936d199552584c91f9dd82dceaa7a, type: 3}
+  - {fileID: 3317166604640994117, guid: f415b210de70b0e4cbd1b25592377874, type: 3}
+--- !u!4 &428024697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428024695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &597505691
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,22 +378,22 @@ PrefabInstance:
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.002
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.016
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5
+      value: -4.932
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.08715578
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
@@ -352,7 +408,7 @@ PrefabInstance:
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9961947
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
@@ -362,7 +418,7 @@ PrefabInstance:
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
@@ -382,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 3269064270842906904, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: targetOffset.y
-      value: -0.5
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906905, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
