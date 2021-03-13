@@ -84,6 +84,7 @@ public class Counter : MonoBehaviour
             increment.interactable = true;
             decrement.interactable = true;
         }
+        counterText.SetText(value.ToString());
 
         if (!isFinished)
             Round();
@@ -94,7 +95,6 @@ public class Counter : MonoBehaviour
         float t = roundLength - (Time.time - initTime);
         if (t > 0)
         {
-            counterText.SetText(value.ToString());
             timerText.SetText(t.ToString("N0"));
         }
         else if (t <= 0)
