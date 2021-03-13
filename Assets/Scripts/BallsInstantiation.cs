@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BallsInstantiation : MonoBehaviour
 {
+    public static GameObject instance;
     [Range(1, 10)]
     public int minAmountBalls = 5;
     [Range(2, 25)]
@@ -16,11 +17,23 @@ public class BallsInstantiation : MonoBehaviour
     public float minZ;
     public float maxZ;
 
+    public Transform ballParent;
+
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
     public GameObject[] myPrefabs;
-    
+
     //public string[] prefabNames = {"Big String Ball.prefab", "Grey Fur Ball.prefab", "Leopard Fur Ball.prefab", "Wooden Ball.prefab", "Yellow Fabric Ball.prefab"};
     //public GameObject[] prefabs;
+
+    private void Awake()
+    {
+        if(instance != null)
+        {
+            Destroy(instance.gameObject);
+        }
+        instance = this.gameObject;
+
+    }
 
     // This script will simply instantiate the Prefab when the game starts.
     void Start()
@@ -42,6 +55,7 @@ public class BallsInstantiation : MonoBehaviour
             float z = Random.Range(minZ, maxZ);
             float height = Random.Range(minY, maxY);
             GameObject ball = Instantiate(prefab, transform.position + new Vector3(x, height, z), Quaternion.identity);
+            ball.transform.parent = ballParent;
             Rigidbody rb = ball.GetComponent<Rigidbody>();
             rb.AddForce(Random.onUnitSphere * 10, ForceMode.Impulse);
         }

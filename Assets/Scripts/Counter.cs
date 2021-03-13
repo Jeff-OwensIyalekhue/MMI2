@@ -88,6 +88,8 @@ public class Counter : MonoBehaviour
 
         if (!isFinished)
             Round();
+        else
+            Destroy(BallsInstantiation.instance);
     }
 
     public void Round()

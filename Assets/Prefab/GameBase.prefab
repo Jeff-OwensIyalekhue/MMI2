@@ -100,6 +100,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5788731086820251581, guid: e974f9cc015bdef42a6ebc9173f05c84,
         type: 3}
+      propertyPath: ballParent
+      value: 
+      objectReference: {fileID: 3452617299268002726}
+    - target: {fileID: 5788731086820251581, guid: e974f9cc015bdef42a6ebc9173f05c84,
+        type: 3}
       propertyPath: myPrefabs.Array.size
       value: 5
       objectReference: {fileID: 0}
