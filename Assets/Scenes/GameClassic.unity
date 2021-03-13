@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2140269523}
-  m_IndirectSpecularColor: {r: 0.5649007, g: 0.6356403, b: 0.72393775, a: 1}
+  m_IndirectSpecularColor: {r: 0.5649006, g: 0.63563985, b: 0.723937, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -275,7 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bf554d8dd88fb49bfb5c404c3df9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountBalls: 10
+  minAmountBalls: 5
+  maxAmountBalls: 20
   minY: 0
   maxY: 0
   minX: 0
@@ -429,6 +430,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3269064270842906901, guid: ba38e1373c4e211409746198ccc9c4e4,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3269064270842906901, guid: ba38e1373c4e211409746198ccc9c4e4,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3269064270842906901, guid: ba38e1373c4e211409746198ccc9c4e4,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3269064270842906901, guid: ba38e1373c4e211409746198ccc9c4e4,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906904, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
