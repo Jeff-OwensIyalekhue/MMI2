@@ -5,13 +5,12 @@ using UnityEngine;
 
 public class QuitScript : MonoBehaviour
 {
-    public void QuitGame()
-    {
-#if UNITY_STANDALONE
-        Application.Quit();
-#endif
+  public void QuitGame()
+  {
 #if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
+    EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
 #endif
-    }
+  }
 }
