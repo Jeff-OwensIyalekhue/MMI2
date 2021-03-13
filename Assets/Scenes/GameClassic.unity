@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2140269523}
-  m_IndirectSpecularColor: {r: 0.5649006, g: 0.63563985, b: 0.723937, a: 1}
+  m_IndirectSpecularColor: {r: 0.5649007, g: 0.6356403, b: 0.72393775, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -327,27 +327,27 @@ PrefabInstance:
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.016
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.932
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9961947
+      value: 0.9781476
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08715578
+      value: 0.20791169
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
@@ -362,7 +362,7 @@ PrefabInstance:
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 10
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906900, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
@@ -382,23 +382,28 @@ PrefabInstance:
     - target: {fileID: 3269064270842906901, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 1
+      value: 0.6156863
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906901, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 1
+      value: 0.42352942
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906901, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906904, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1472437959}
+    - target: {fileID: 3269064270842906904, guid: ba38e1373c4e211409746198ccc9c4e4,
+        type: 3}
+      propertyPath: distance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3269064270842906904, guid: ba38e1373c4e211409746198ccc9c4e4,
         type: 3}
       propertyPath: targetOffset.y
