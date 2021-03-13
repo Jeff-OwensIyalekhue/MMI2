@@ -44,14 +44,25 @@ public class OrbitCameraScript : MonoBehaviour
     //If there is no target, create a temporary target at 'distance' from the cameras current viewpoint
     if (!target)
     {
+      Debug.Log("Orbitcamera found no target.");
       GameObject go = new GameObject("Cam Target");
       go.transform.position = transform.position + (transform.forward * distance);
       target = go.transform;
     }
 
+    float setDistance = distance;
     distance = Vector3.Distance(transform.position, target.position);
+    Debug.Log(distance);
     currentDistance = distance;
-    desiredDistance = distance;
+    desiredDistance = distance * currentDistance / setDistance;
+
+    position = transform.position;
+    rotation = transform.rotation;
+
+    position = target.position - (rotation * Vector3.forward * desiredDistance);
+    position -= targetOffset;
+
+    transform.position = position;
 
     //be sure to grab the current rotations as starting points.
     position = transform.position;
