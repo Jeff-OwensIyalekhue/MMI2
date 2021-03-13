@@ -5,7 +5,10 @@ using UnityEngine;
 public class BallsInstantiation : MonoBehaviour
 {
     [Range(1, 10)]
-    public int amountBalls;
+    public int minAmountBalls = 5;
+    [Range(2, 25)]
+    public int maxAmountBalls = 20;
+    public static int amountBalls;
     public float minY;
     public float maxY;
     public float minX;
@@ -25,13 +28,13 @@ public class BallsInstantiation : MonoBehaviour
         // load prefabs
         //this.prefabs = loadPrefabs();
 
-        this.amountBalls = Random.Range(5,20);
+        amountBalls = Random.Range(minAmountBalls, maxAmountBalls);
+        print("balls: " + amountBalls);
         // Instantiate at position (0, 0, 0) and zero rotation.
-        for (int i = 0; i < this.amountBalls; i++)
+        for (int i = 0; i < amountBalls; i++)
         {
             // pick random prefab
-            int index = Random.Range(0, this.myPrefabs.Length - 1);
-            print(index);
+            int index = Random.Range(0, this.myPrefabs.Length);
             GameObject prefab = this.myPrefabs[index];
 
             // render at random position

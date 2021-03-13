@@ -8,7 +8,7 @@ public class Counter : MonoBehaviour
 
     public int initialValue;
     public int minValue = 0;
-    public int maxValue = 10;
+    public int maxValue = 25;
     public int step = 1;
 
     int value;
@@ -116,9 +116,9 @@ public class Counter : MonoBehaviour
         textAnim.SetTrigger("Change");
     }
 
-    public void SetConfirm(bool toSet)
+    public void SetConfirm()
     {
-        confirm.gameObject.SetActive(toSet);
+        GameoverMessage.didWin = value == BallsInstantiation.amountBalls;
     }
 
     public int getValue()

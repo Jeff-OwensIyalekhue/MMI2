@@ -6,7 +6,7 @@ using TMPro;
 public class GameoverMessage : MonoBehaviour
 {
 
-    public bool didWin;
+    public static bool didWin;
 
     bool win;
     [SerializeField]
